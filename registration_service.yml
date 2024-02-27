@@ -1,0 +1,26 @@
+server:
+ port: 9090
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+     defaultZone: http://localhost:8761/eureka/
+  instance:
+     hostname: localhsot
+ 
+spring:
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/registration_db
+    username: root
+    password: root
+  jpa:
+   hibernate:
+      ddl-auto: update
+   generate-ddl: true
+   show-sql: true
+ 
+    
+    
