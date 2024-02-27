@@ -1,0 +1,23 @@
+server:
+  port: 9094
+spring:
+  config:
+    import: "optional:configserver:http://localhost:9093"
+  cloud:
+    gateway:
+      mvc:
+        routes:
+        - id: employe-service
+          uri: lb://employe-service
+          predicates:
+            path=/employe/**
+        - id: department-service
+          uri: lb://department-service
+          predicates:
+            path=/department/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
