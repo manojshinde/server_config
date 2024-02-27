@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/advertiserDetail_db123
+    url: jdbc:mysql://localhost:3306/advertiserDetail_db
     username: root
     password: root
   jpa:
